@@ -112,7 +112,22 @@ void search(int val){
     
     
     
-    
+    public void del(int tar){
+        if(head.data==tar){
+            head=head.next;
+        }
+        else{
+            Node n=head;
+            while(n.next!=null&& n.next.data!=tar){
+                
+                n=n.next;
+                
+                
+                
+            }
+            n.next=n.next.next;
+        }
+    }
     
     
 
@@ -142,6 +157,7 @@ public class Main
 	    
 	    SLL o=new SLL();
 	    o.insert(10); o.insert(20); o.insert(30); o.insert(40);
+	    o.del(40);
 	    o.disp();
 	    o.search(70);
 		
